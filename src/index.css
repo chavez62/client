@@ -1,13 +1,13 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input::placeholder,
+textarea::placeholder {
+  color: #a0aec0; /* Tailwind color for gray-400 */
+  opacity: 1; /* Override default opacity */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button-enhanced {
+  @apply px-4 py-2 bg-primary text-white rounded shadow hover:bg-purple-700 transition duration-300 transform hover:scale-105;
 }
