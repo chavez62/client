@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="text-2xl font-bold hover:text-gray-300 transition duration-300">
-              My Blog
+              Dawg with a Blog
             </Link>
           </div>
           <div className="hidden md:flex space-x-4">
