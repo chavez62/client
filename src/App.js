@@ -15,14 +15,17 @@ const App = () => {
   const fetchPosts = async () => {
     try {
       const response = await axios.get('http://localhost:5000/api/posts');
-      setPosts(response.data);
+      // Sort posts by creation date, newest first
+      const sortedPosts = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+      setPosts(sortedPosts);
     } catch (error) {
       console.error('There was an error fetching the posts!', error);
     }
   };
 
   const addPost = (newPost) => {
-    setPosts([...posts, newPost]);
+    // Prepend the new post to the beginning of the posts array
+    setPosts([newPost, ...posts]);
   };
 
   return (

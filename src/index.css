@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-input::placeholder,
-textarea::placeholder {
-  color: #a0aec0; /* Tailwind color for gray-400 */
-  opacity: 1; /* Override default opacity */
-}
 
+/* Button styles */
 .button-enhanced {
   @apply px-4 py-2 bg-primary text-white rounded shadow hover:bg-purple-700 transition duration-300 transform hover:scale-105;
 }

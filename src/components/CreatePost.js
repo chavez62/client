@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../index.css';
 
 const CreatePost = ({ addPost }) => {
   const [title, setTitle] = useState('');
@@ -30,7 +31,7 @@ const CreatePost = ({ addPost }) => {
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full p-2 border rounded mt-1 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+          className="w-full p-2 border rounded mt-1 border-purple-500 focus:outline-none focus:ring-purple-500 focus:border-purple-500 transition duration-300"
           required
         />
       </div>
@@ -39,7 +40,7 @@ const CreatePost = ({ addPost }) => {
         <textarea
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          className="w-full p-2 border rounded mt-1 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+          className="w-full p-2 border rounded mt-1 border-purple-500 focus:outline-none focus:ring-purple-500 focus:border-purple-500 transition duration-300"
           required
         />
       </div>
